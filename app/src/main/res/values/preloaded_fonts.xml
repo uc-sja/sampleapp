@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/abril_fatface</item>
+        <item>@font/aclonica</item>
+        <item>@font/allerta</item>
+        <item>@font/almendra_bold</item>
+        <item>@font/dancing_script_bold</item>
+        <item>@font/dr_sugiyama</item>
+        <item>@font/nova_script</item>
+        <item>@font/quattrocento_sans_bold</item>
+    </array>
+</resources>
