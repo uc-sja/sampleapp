@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/category_container"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_130sdp">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/bg_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/cat2"
+        android:backgroundTint="#80000000"
+        android:backgroundTintMode="src_over"
+        android:scaleType="fitXY"
+        />
+
+
+    <TextView
+        android:id="@+id/category_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:layout_gravity="center_horizontal|bottom"
+        android:textSize="@dimen/_15ssp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:textColor="@color/whiteshadow"/>
+
+
+
+</FrameLayout>

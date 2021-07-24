@@ -1,0 +1,16 @@
+[
+  {"name": "Life", "id" : 0},
+  {"name": "Power",  "id" : 1},
+  {"name": "Inspirational",  "id" : 2},
+  {"name": "Attitude",  "id" : 3},
+  {"name": "Goal", "id" : 4},
+  {"name": "Action", "id" : 5},
+  {"name": "Confidence", "id" : 6},
+  {"name": "Failure", "id" : 7},
+  {"name": "Feeling Lost", "id" : 8},
+  {"name": "Giving Up", "id" : 9},
+  {"name": "HardWork", "id" : 10},
+  {"name": "Proverbs", "id" : 11},
+  {"name": "Your Quotes", "id" : 12},
+  {"name": "Your Quotes", "id" : 13}
+]

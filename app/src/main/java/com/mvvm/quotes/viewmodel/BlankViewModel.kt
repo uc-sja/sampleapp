@@ -2,6 +2,8 @@ package com.mvvm.quotes.viewmodel
 
 import android.content.Context
 import android.util.Log
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -14,27 +16,32 @@ class BlankViewModel(private val context: Context) : ViewModel() {
 
     private lateinit var quotesList: ArrayList<Quote>
     private var index = 0
+    val quote = MutableLiveData(Quote("", ""))
+
     init {
         quotesList = getQuotes();
+        quote.value = quotesList[index]
     }
+//
+//    fun getQuote(): Quote{
+//        return quotesList[index]
+//    }
 
-    fun getQuote(): Quote{
-
-        return quotesList[index]
-    }
-
-    fun nextQuote(): Quote{
+    fun nextQuote() {
         index++
         index = if (index < quotesList.size) index else 0
         Log.d(TAG, "nextQuote: "+index)
-        return quotesList[index]
+
+        quote.value = quotesList[index]
     }
 
-    fun previousQuote(): Quote{
+    fun previousQuote() {
         index--
         index = if (index >= 0) index else quotesList.size -1
         Log.d(TAG, "nextQuote: "+index)
-        return quotesList[index]
+
+        quote.value = quotesList[index]
+
     }
 
     private val TAG = "BlankViewModel"

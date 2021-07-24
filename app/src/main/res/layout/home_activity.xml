@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+
+        <variable
+            name="viewmodel"
+            type="com.mvvm.quotes.viewmodel.BlankViewModel"
+
+            />
+
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradient"
+        >
+
+        <LinearLayout
+            android:id="@+id/quote_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_250sdp"
+            android:padding="@dimen/_10sdp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_card"
+            android:layout_margin="@dimen/_20sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/abril_fatface"
+                android:textSize="@dimen/_16ssp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/qod" />
+
+
+            <TextView
+                android:id="@+id/quote_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:fontFamily="@font/quattrocento_sans_bold"
+                android:maxLines="5"
+                android:scrollbars="vertical"
+                android:text="@{viewmodel.quote.quote}"
+                android:textSize="@dimen/_17ssp" />
+
+
+            <TextView
+                android:id="@+id/quote_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/quattrocento_sans_bold"
+                android:text="@{ viewmodel.quote.author}"
+                android:textSize="@dimen/_16ssp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/expore_btn"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_below="@+id/quote_container"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:background="@drawable/explore_btn"
+            android:fontFamily="quattrocento_sans_bold"
+            android:textColor="@color/text_day_night"
+            android:gravity="center"
+            android:text="@string/explore"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_15sdp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/previous_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:textAllCaps="true"
+                android:padding="@dimen/_25sdp"
+                android:text="@string/previous"
+                android:onClick="@{()->viewmodel.previousQuote()}"
+                android:textColor="@color/next_btns" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+
+
+            <TextView
+                android:id="@+id/next_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:padding="@dimen/_25sdp"
+                android:fontFamily="monospace"
+                android:text="@string/next"
+                android:onClick="@{()->viewmodel.nextQuote()}"
+                android:textColor="@color/next_btns" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

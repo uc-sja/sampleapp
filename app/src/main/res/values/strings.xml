@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">ViewModel</string>
+    <string name="app_name">Daily Motivation</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="qod">Quote of the day</string>
+    <string name="explore"><u>Explore</u></string>
+    <string name="categories">Categories</string>
+    <string name="quotes">Quotes</string>
 </resources>

@@ -3,14 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/blankFragment">
+    app:startDestination="@id/categoryFragment">
 
 
     <fragment
-        android:id="@+id/blankFragment"
-        android:name="com.mvvm.quotes.view.fragment.BlankFragment"
+        android:id="@+id/categoryFragment"
+        android:name="com.mvvm.quotes.view.fragment.CategoryFragment"
         android:label="blank_fragment"
-        tools:layout="@layout/blank_fragment" />
+        tools:layout="@layout/category_fragment" >
+        <action
+            android:id="@+id/action_categoryFragment_to_quoteListFragment"
+            app:destination="@id/quoteListFragment"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:launchSingleTop="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/quoteListFragment"
+        android:name="com.mvvm.quotes.view.fragment.QuoteListFragment"
+        android:label="quote_list_fragment"
+        tools:layout="@layout/quote_list_fragment" >
+
+        <action
+            android:id="@+id/action"
+        />
+        <argument
+            android:name="category_id"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
 
 
 </navigation>
