@@ -21,7 +21,6 @@
 
     <fragment
         android:id="@+id/quoteListFragment"
-        android:name="com.mvvm.quotes.view.fragment.QuoteListFragment"
         android:label="quote_list_fragment"
         tools:layout="@layout/quote_list_fragment" >
 
