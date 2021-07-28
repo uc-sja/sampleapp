@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single"
+        >
+
+        <item android:id="@+id/create_quote"
+            android:title="@string/create"
+            android:icon="@drawable/ic_baseline_create_24"
+            android:checked="true"
+            />
+
+        <item android:id="@+id/your_creations"
+            android:title="@string/creations"
+            android:icon="@drawable/ic_baseline_playlist_add_24"
+            />
+
+
+        <item android:id="@+id/favorites"
+            android:title="@string/my_favourite"
+            android:icon="@drawable/ic_baseline_playlist_add_24"
+            />
+
+        <item android:id="@+id/self_lessons"
+                android:title="@string/lessons"
+                android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+        />
+    </group>
+
+    <group android:id="@+id/group2"
+        >
+
+        <item android:id="@+id/feedback"
+            android:title="@string/feed"
+            android:icon="@drawable/ic_baseline_feedback_24"
+            />
+
+        <item android:id="@+id/share"
+            android:title="@string/share"
+            android:icon="@drawable/ic_baseline_feedback_24"
+            />
+
+
+    </group>
+
+</menu>

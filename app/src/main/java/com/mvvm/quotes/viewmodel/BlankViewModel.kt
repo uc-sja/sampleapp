@@ -2,15 +2,12 @@ package com.mvvm.quotes.viewmodel
 
 import android.content.Context
 import android.util.Log
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.mvvm.quotes.model.Quote
-import java.io.BufferedReader
-import java.io.File
-import java.lang.reflect.Type
+import com.mvvm.quotes.model.database.room.entities.Quote
+import com.mvvm.quotes.model.pojo.Quote
 
 class BlankViewModel(private val context: Context) : ViewModel() {
 

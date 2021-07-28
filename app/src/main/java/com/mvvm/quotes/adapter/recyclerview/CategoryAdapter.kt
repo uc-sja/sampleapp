@@ -8,7 +8,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
 import com.mvvm.quotes.R
-import com.mvvm.quotes.model.Category
+import com.mvvm.quotes.model.pojo.Category
 import com.mvvm.quotes.view.fragment.CategoryFragmentDirections
 
 class CategoryAdapter(private val dataSet: ArrayList<Category>) :
@@ -52,9 +52,12 @@ class CategoryAdapter(private val dataSet: ArrayList<Category>) :
     }
 
         private fun openCategory(category: Category, view: View) {
+            val action = CategoryFragmentDirections.actionCategoryFragmentToQuoteListFragment(category.id)
+            view.findNavController().navigate(action)
         }
 
         // Return the size of your dataset (invoked by the layout manager)
+
     override fun getItemCount() = dataSet.size
 
     fun updateItems(newCategories: ArrayList<Category>){

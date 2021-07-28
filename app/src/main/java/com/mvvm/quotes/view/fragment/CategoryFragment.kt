@@ -1,6 +1,5 @@
 package com.mvvm.quotes.view.fragment
 
-import android.content.res.Resources
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -9,17 +8,13 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 import com.mvvm.quotes.R
 import com.mvvm.quotes.adapter.recyclerview.CategoryAdapter
 import com.mvvm.quotes.adapter.recyclerview.SpaceItemdecoration
-import com.mvvm.quotes.adapter.recyclerview.SpacesItemDecoration2
 import com.mvvm.quotes.databinding.CategoryFragmentBinding
-import com.mvvm.quotes.model.Category
+import com.mvvm.quotes.model.pojo.Category
 import com.mvvm.quotes.viewmodel.BlankViewModel
-import me.farahani.spaceitemdecoration.SpaceItemDecoration
 
 
 class CategoryFragment : Fragment() {

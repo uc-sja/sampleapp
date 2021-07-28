@@ -3,34 +3,66 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
+    android:label="@string/categories"
     app:startDestination="@id/categoryFragment">
 
 
     <fragment
         android:id="@+id/categoryFragment"
         android:name="com.mvvm.quotes.view.fragment.CategoryFragment"
-        android:label="blank_fragment"
-        tools:layout="@layout/category_fragment" >
+        android:label="@string/categories"
+        tools:layout="@layout/category_fragment">
         <action
             android:id="@+id/action_categoryFragment_to_quoteListFragment"
             app:destination="@id/quoteListFragment"
             app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:launchSingleTop="false" />
+             />
     </fragment>
 
     <fragment
         android:id="@+id/quoteListFragment"
-        android:label="quote_list_fragment"
-        tools:layout="@layout/quote_list_fragment" >
+        android:name="com.mvvm.quotes.view.fragment.QuoteListFragment"
+        android:label="@string/quotes"
+        tools:layout="@layout/quote_list_fragment">
 
-        <action
-            android:id="@+id/action"
-        />
+        <action android:id="@+id/action" />
         <argument
             android:name="category_id"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_quoteListFragment_to_quotationFragment"
+            app:destination="@id/quotationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/quotationFragment"
+        android:name="com.mvvm.quotes.view.fragment.QuotationFragment"
+        android:label="Motivation"
+        tools:layout="@layout/fragment_quotation">
+        <argument
+            android:name="quote"
+            app:argType="com.mvvm.quotes.model.pojo.Quote" />
+        <action
+            android:id="@+id/action_quotationFragment_to_createQuoteFragment"
+            app:destination="@id/createQuoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createQuoteFragment"
+        android:name="com.mvvm.quotes.view.fragment.CreateQuoteFragment"
+            android:label="{title}" >
+        <argument
+            android:name="quote"
+            app:argType="com.mvvm.quotes.model.pojo.Quote"
+            app:nullable="true"
+            android:defaultValue="@null" />
+
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="Create Quotation" />
+
+
     </fragment>
 
 

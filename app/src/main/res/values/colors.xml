@@ -14,6 +14,12 @@
     <color name="next_btns">#8F8B8B</color>
     <color name="off_white">#E7E6E6</color>
     <color name="light_cream">#FFFBEB</color>
-    <color name="while_overlay">#50FFFFFF</color>
+    <color name="white_overlay">#99FFFFFF</color>
     <color name="text_day_night">#202020</color>
+    <color name="text_day_night_clear">#000000</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="dark_overlay">#99000000</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="day_night_overlay">#99FFFFFF</color>
 </resources>

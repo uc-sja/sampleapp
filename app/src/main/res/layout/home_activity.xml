@@ -20,6 +20,7 @@
         android:background="@drawable/bg_gradient"
         >
 
+
         <LinearLayout
             android:id="@+id/quote_container"
             android:layout_width="match_parent"

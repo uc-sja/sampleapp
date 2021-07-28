@@ -6,4 +6,16 @@
     <string name="explore"><u>Explore</u></string>
     <string name="categories">Categories</string>
     <string name="quotes">Quotes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="create">Pen Quote</string>
+    <string name="creations">Your Quotes</string>
+    <string name="my_favourite">Favorite Quotes</string>
+    <string name="lessons">Self Lessons</string>
+    <string name="feed">Feedback</string>
+    <string name="share">Share App</string>
+    <string name="header_title">Daily Motivation</string>
+    <string name="header_description">Your Daily Dose Of Motivation</string>
+    <string name="nav_btn">Navigation Button</string>
+    <string name="quotes_author">Quote By</string>
 </resources>

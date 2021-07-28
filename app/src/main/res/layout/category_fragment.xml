@@ -16,7 +16,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/cardview_light_background"
         >
 
             <LinearLayout
@@ -25,15 +24,6 @@
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
                 android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/abril_fatface"
-                    android:textSize="@dimen/_16ssp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:text="@string/categories" />
 
 
                 <androidx.recyclerview.widget.RecyclerView
